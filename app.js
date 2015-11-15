@@ -7,28 +7,29 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 2999);
+app.set('port', 3000);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/',function(req,res){
   var content = {};
-  content.title = "This is a GET request";
-  console.log("GET");
-  console.log(req);
+  content.title = "GET Request Received";
+
   var params = [];
   for (var p in req.query){
     params.push({'name':p,'value':req.query[p]})
   }
+  console.log("GET");
+  console.log(req);
+  console.log(params);
   content.dataList = params;
   res.render('home', content);
 });
 
 app.post('/', function(req, res){
   var content = {}
-
-  content.title = "This is a POST request";
+  content.title = "POST Request Received";
   var params = [];
   for (var p in req.body){
     params.push({'name':p,'value':req.body[p]})
