@@ -27,6 +27,11 @@ app.get('/',function(req,res){
   res.render('home', content);
 });
 
+app.get('/app',function(req,res){
+
+  res.render('app');
+});
+
 app.post('/', function(req, res){
   var content = {}
   content.title = "POST Request Received";
