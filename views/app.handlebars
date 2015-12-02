@@ -1,0 +1,51 @@
+
+<h1>How to: Facebook API</h1>
+<div>
+  <h2>Getting Started</h2>
+  <p>Facebook require that users of their api to be sign up for their developer program</p>
+  <a href='https://developers.facebook.com/'>https://developers.facebook.com/</a>
+  <p>You must add the facebook api reference to your code and encase it in a script tag. See below. </p>
+  <p>This snippet of code should be added to the bottom of the body tag</p>
+  <code>
+    '(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=770522426387784";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));'
+  </code>
+</div>
+<div>
+  <h2>Sharing</h2>
+  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+</div>
+<div>
+
+  <p>
+    Facebook API
+
+Sign up as a developer in https://developers.facebook.com
+
+like button - https://developers.facebook.com/docs/plugins/like-button
+
+share button - https://developers.facebook.com/docs/plugins/share-button
+
+comments - https://developers.facebook.com/docs/plugins/comments#configurator
+
+login - https://developers.facebook.com/docs/facebook-login/web
+
+SDK - https://developers.facebook.com/docs/javascript/quickstart/v2.5
+</p>
+
+
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=770522426387784";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
